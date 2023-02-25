@@ -8,7 +8,6 @@ st.set_page_config(page_title = "A/B Hat", page_icon=":tophat:", layout = 'wide'
 # --- Header Section ---
 with st.container(): 
     st.title(":tophat: A/B Hat: Easy sample size calculations for your next A/B test") 
-   # st.subheader("Easy sample size calculations for your next A/B test")
 
 # --- Sample size calculation ---
 def sample_size(baseline, mde, mde_type, sig_level, power, two_tailed, binomial):
@@ -86,42 +85,31 @@ with st.container():
         st.header("The minimum sample size that you need is")
 
         st.markdown(
-    """
-<style>
-[data-testid="stMetricValue"] {
-    font-size: 100px;
-}
+                            """
+                        <style>
+                        [data-testid="stMetricValue"] {
+                            font-size: 100px;
+                        }
 
-/*center metric label*/
-[data-testid="stMetricLabel"] > div:nth-child(1) {
-    justify-content: center;
-}
+                        /*center metric label*/
+                        [data-testid="stMetricLabel"] > div:nth-child(1) {
+                            justify-content: center;
+                        }
 
-/*center metric value*/
-[data-testid="stMetricValue"] > div:nth-child(1) {
-    justify-content: center;
-}
-</style>
+                        /*center metric value*/
+                        [data-testid="stMetricValue"] > div:nth-child(1) {
+                            justify-content: center;
+                        }
+                        </style>
 
 
-""",
-    unsafe_allow_html=True,
-)
+                        """,
+    unsafe_allow_html=True
+        
+        )
 
         st.metric(label='per treatment', value=sample_size(baseline, mde, mde_type, sig_level, power, two_tailed, binomial))
         
-        #st.balloons()
-
-
-
-# --- Testing ---
-#print(f"baseline: {baseline}")
-#print(f"mde: {mde}")
-#print(f"sig_level: {sig_level}")
-#print(f"power: {power}")
-#print(f"two_tailed: {two_tailed}")
-#print(f"binomial: {binomial}")
-#print (sample_size(baseline, mde, mde_type, sig_level, power, two_tailed, binomial))
 
 
 
