@@ -1,2 +1,2 @@
 # ab_hat
-AB Sample Size Calculator
+🎩 A/B Sample Size Calculator
