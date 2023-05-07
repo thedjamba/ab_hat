@@ -1,4 +1,5 @@
 import streamlit as st
+import scipy.stats
 
 st.set_page_config(page_title = "A/B Hat", page_icon=":tophat:", layout = 'wide')
 # emojis https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -29,8 +30,6 @@ def sample_size(baseline, mde, mde_type, sig_level, power, two_tailed, binomial)
     Zp = scipy.stats.norm.ppf(1 - sig_level)
     Zpower = scipy.stats.norm.ppf(power/100.)
     n = (2 * variance * (Zp + Zpower)**2) / (mde**2)
-    #return math.ceil(n)
-    #return round(n)
     return (f"{round(n):,d}")
 
 # --- Container and columns ---
