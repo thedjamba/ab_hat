@@ -1,6 +1,4 @@
 import streamlit as st
-import scipy.stats
-import math
 
 st.set_page_config(page_title = "A/B Hat", page_icon=":tophat:", layout = 'wide')
 # emojis https://www.webfx.com/tools/emoji-cheat-sheet/
