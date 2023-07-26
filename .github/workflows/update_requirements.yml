@@ -9,6 +9,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -53,3 +55,4 @@ jobs:
         git add requirements.txt
         git commit -m "Updated requirements.txt" || echo "No changes to commit"
         git push
+
