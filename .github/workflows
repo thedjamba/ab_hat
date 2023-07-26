@@ -33,7 +33,7 @@ jobs:
 
     - name: Generate requirements.txt
       run: |
-        pipreqs --force ./
+        pipreqs --force $GITHUB_WORKSPACE
         if [ $? -ne 0 ]; then
             echo "Error generating requirements.txt"
             exit 1
