@@ -38,6 +38,7 @@ jobs:
             echo "Error generating requirements.txt"
             exit 1
         fi
+        cat $GITHUB_WORKSPACE/requirements.txt
 
     - name: Check if requirements.txt changed
       id: diff
